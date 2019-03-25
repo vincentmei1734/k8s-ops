@@ -61,8 +61,8 @@ Events:
 ### 浏览器验证
 http://10.10.69.232:31594/mytest
 
-- 返回nginx欢迎界面：
+![welcome](https://github.com/vincentmei1734/k8s-ops/blob/master/img/welcome.jpg)
 
 http://10.10.69.232:31594/
 
-- 返回默认404页面
+![404页面](https://github.com/vincentmei1734/k8s-ops/blob/master/img/404.jpg)

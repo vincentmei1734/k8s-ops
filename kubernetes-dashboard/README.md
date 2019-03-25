@@ -27,7 +27,7 @@ kubectl proxy --address=0.0.0.0 --port=8080 --disable-filter=true
 ```
 http://x.x.x.x:8080/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/      #替换自己的master ip
 ```
-
+![dashboard](https://github.com/vincentmei1734/k8s-ops/blob/master/img/dashboard.jpg)
 
 ### 参考资料
 https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
