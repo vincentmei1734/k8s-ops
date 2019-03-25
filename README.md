@@ -1,7 +1,7 @@
 # k8s-ops
 K8S运维笔记
 
-#ingress-nginx
+# ingress-nginx
 该ingress-nginx是一个模版，可以根据生产情况做调整，以上版本在我的环境可以正常运行。
 ```
 [root@master ingress-nginx]# kubectl get all -n ingress-nginx
@@ -55,5 +55,7 @@ Events:
 浏览器验证
 
 http://10.10.69.232:31594/mytest
+返回nginx欢迎界面：
 
 http://10.10.69.232:31594/
+返回默认404页面
