@@ -3,11 +3,11 @@
 
 checkout版本并安装
 
-'''
+```
 git clone https://github.com/vincentmei1734/k8s-ops.git
 cd kubernetes-dashboard
 kubectl apply -f \*.yaml
-'''
+```
 
 查看运行状态
 ```
@@ -23,6 +23,6 @@ replicaset.apps/kubernetes-dashboard-765cc7b476   1         1         1       18
 kubectl proxy --address=0.0.0.0 --port=8080 --disable-filter=true
 ```
 浏览器访问【选择跳过访问】
-'''
+```
 http://x.x.x.x:8080/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/      #替换自己的master ip
-'''
+```
