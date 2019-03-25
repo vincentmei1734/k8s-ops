@@ -1,5 +1,13 @@
 # ingress-nginx
 该ingress-nginx是一个模版，可以根据生产情况做调整，以上版本在我的环境可以正常运行。
+
+### checkout版本并安装
+```
+git clone https://github.com/vincentmei1734/k8s-ops.git
+KUBECTL apply -f ingress-nginx/
+```
+
+### 检查安装
 ```
 [root@master ingress-nginx]# kubectl get all -n ingress-nginx
 NAME                                           READY   STATUS    RESTARTS   AGE
@@ -24,8 +32,8 @@ replicaset.apps/default-http-backend-554c497679      1         1         1      
 replicaset.apps/hello-world-78f948f44c               3         3         3       46m
 replicaset.apps/nginx-ingress-controller-f879d9b4f   1         1         1       46m
 ```
-查看ingress规则
 
+### 查看ingress规则
 ```
 [root@master ingress-nginx]# kubectl describe ingress ingress-my-service -n ingress-nginx
 Name:             ingress-my-service
@@ -49,8 +57,8 @@ Events:
   ----    ------  ----  ----                      -------
   Normal  CREATE  48m   nginx-ingress-controller  Ingress ingress-nginx/ingress-my-service
 ```
-浏览器验证
 
+### 浏览器验证
 http://10.10.69.232:31594/mytest
 
 - 返回nginx欢迎界面：
