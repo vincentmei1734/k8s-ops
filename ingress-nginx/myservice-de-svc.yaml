@@ -1,0 +1,51 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: mytest
+  name: hello-world
+  namespace: ingress-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: mytest
+  template:
+    metadata:
+      labels:
+        run: mytest
+    spec:
+      containers:
+      - image: nginx:1.14.2-alpine
+        name: hello-world
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      #   volumeMounts:
+      #     - mountPath: /var/log/nginx/
+      #       name: mynfs
+      # volumes:
+      #   - name: mynfs
+      #     persistentVolumeClaim:
+      #       claimName: nfs
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: mytest
+  name: myservice
+  namespace: ingress-nginx
+spec:
+#  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+      #    nodePort: 30567
+  selector:
+    run: mytest
+
