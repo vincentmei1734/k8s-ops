@@ -134,14 +134,14 @@ node_ip prometheus.vincent.com
 ```
 
 访问prometheus
-
+![prometheus](https://github.com/vincentmei1734/k8s-ops/blob/master/img/prometheus.jpg)
 
 访问alertmanager
-
+![alertmanager](https://github.com/vincentmei1734/k8s-ops/blob/master/img/alertmanager.jpg)
 
 访问grafana
-
-
+![grafana1](https://github.com/vincentmei1734/k8s-ops/blob/master/img/grafana1.jpg)
+![grafana2](https://github.com/vincentmei1734/k8s-ops/blob/master/img/grafana2.jpg)
 
 ### 鸣谢！
 感谢[brancz](https://github.com/coreos/prometheus-operator)大神是prometheus operator的主要代码贡献者。
