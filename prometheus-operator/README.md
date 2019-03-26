@@ -10,6 +10,7 @@
 - 预置了告警
 - 预置了Grafana dashboard和模版dashboard
 - 部署不到一分钟，支持一键卸载
+
 这篇文章主要是使用这个一键部署脚本实现Kubernets集群监控，下面我们开始操作了。
 
 ### 运行环境：
@@ -133,13 +134,13 @@ node_ip alertmanager.vincent.com
 node_ip prometheus.vincent.com
 ```
 
-访问prometheus
+###### 访问prometheus
 ![prometheus](https://github.com/vincentmei1734/k8s-ops/blob/master/img/prometheus.jpg)
 
-访问alertmanager
+###### 访问alertmanager
 ![alertmanager](https://github.com/vincentmei1734/k8s-ops/blob/master/img/alertmanager.jpg)
 
-访问grafana
+###### 访问grafana
 ![grafana1](https://github.com/vincentmei1734/k8s-ops/blob/master/img/grafana1.jpg)
 ![grafana2](https://github.com/vincentmei1734/k8s-ops/blob/master/img/grafana2.jpg)
 
