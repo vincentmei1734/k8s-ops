@@ -1,7 +1,7 @@
 # Prometheus Operator
 这篇文章的主要目的是简单了解prometheus operator并快速在自己环境部署一套prometheus operator。
 
-### 简单介绍prometheus operator
+### 简单介绍
 [brancz](https://github.com/coreos/prometheus-operator)是prometheus operator项目的核心代码提交人。这个项目主要是解决prometheus在Kubernetes监控方案的落地。prometheus operator会自动创建、配置、管理[Prometheus](https://prometheus.io/)监控实例,另外会自动生成监控对象基于kubernetes的label匹配。总之，这个工具就是解决了kubernetes集群上node，pod，namespace,cluster整体的监控落地。
 [camilb](https://github.com/camilb/prometheus-kubernetes)提供了prometheus operator一键部署，功能列举如下：
 - 支持AWS,GCP，Azure自动化安装配置，支持自建kubernetes集群；
@@ -18,7 +18,7 @@
 - centos 7系统
 - Prometheus Operator v0.23.1
 
-### 快速部署prometheus operator
+### 快速部署
 下面github是从camilb大神fork出来，并针对国内环境和部分bug做了修改。使用下面版本即可。在使用deploy脚本的时候注意下下面2点；
 - kubectl默认是没有使用http的api，如果使用了https，请参照下面修改deploy脚本，最好放在39行；
 ```
@@ -145,4 +145,5 @@ node_ip prometheus.vincent.com
 
 ### 鸣谢！
 感谢[brancz](https://github.com/coreos/prometheus-operator)大神是prometheus operator的主要代码贡献者。
+
 感谢[camilb](https://github.com/camilb/prometheus-kubernetes)大神在prometheus operator的基础上提供了一键简单快速的部署配置Prometheus在Kubernetes集群，并提前预制了Grafana dashboard模版，预制了告警。
